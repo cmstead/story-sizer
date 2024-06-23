@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import FunctionalLayers from './Components/FunctionalLayers/index.tsx'
+import ExternalDependencies from './Components/ExternalDependencies/index.tsx'
 import './App.css';
+import { Provider } from 'react-redux';
+import { store } from './services/store.ts';
+import { LOEPredictor } from './Components/LOEPredictor/index.tsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <LOEPredictor></LOEPredictor>
+        <ul>
+          <li><FunctionalLayers></FunctionalLayers></li>
+          <li><ExternalDependencies></ExternalDependencies></li>
+
+          <li>Dependency chain (critical path) length</li>
+          <li>Describe the work: (routine updates (.5), minor enhancement (1), new development (1.5), in discovery (3), experimental (5))</li>
+          <li>Historic ticket/work split value (0, 1, 2, 3, 4, 5)</li>
+        </ul>
+      </div>
+    </Provider>
   );
 }
 
