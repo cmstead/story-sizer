@@ -23,7 +23,6 @@ export default function ExternalDependencies() {
                     value={externalDependencyCount}
                     min={0}
                     onChange={dispatchCountUpdate}></input>
-                (2 per)
             </li>
         </ul>
     )

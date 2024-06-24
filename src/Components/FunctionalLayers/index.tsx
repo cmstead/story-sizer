@@ -3,6 +3,16 @@ import { useSelector, useDispatch } from "react-redux"
 import { horizontalCountSelector, verticalCountSelector } from "./functionalLayerCountSelectors.ts"
 import { actionTypes } from "../../services/constants.ts"
 
+function computeValue(baseValue) {
+    if (baseValue === '') {
+        return baseValue
+    } else if (baseValue > 1) {
+        return Math.round(baseValue)
+    } else {
+        return 1
+    }
+}
+
 export default function FunctionalLayers(): ReactElement {
 
     const verticalCount = useSelector(verticalCountSelector)
@@ -11,11 +21,13 @@ export default function FunctionalLayers(): ReactElement {
     const dispatch = useDispatch()
 
     const updateCount = ({ target }) => {
+        const baseValue = target.value
+        
         return dispatch({
             type: actionTypes.LAYER_COUNT_UPDATED,
             payload: {
                 name: target.name,
-                value: Math.floor(target.value < 1 ? 1 : target.value)
+                value: computeValue(baseValue)
             }
         })
     }
@@ -30,7 +42,6 @@ export default function FunctionalLayers(): ReactElement {
                     name="verticalCount"
                     min={1}
                     onChange={updateCount}></input>
-                (.75 per)
             </li>
             <li>
                 Horizonal layers touched
@@ -40,7 +51,6 @@ export default function FunctionalLayers(): ReactElement {
                     name="horizontalCount"
                     min={1}
                     onChange={updateCount}></input>
-                (.25 per)
             </li>
         </ul>
     )
