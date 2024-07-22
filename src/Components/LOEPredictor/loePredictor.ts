@@ -6,8 +6,6 @@ function sumWeightedValues(loeValues) {
     const workDescriptionValue = loeValues.workDescriptionValue
     const externalDependencyCountWeight = weightMap.externalDependencyCount
 
-    console.log(loeValues.criticalPathDepth)
-
     return (loeValues.verticalCount * verticalCountWeight +
         loeValues.horizontalCount * loeValues.verticalCount * horizontalCountWeight +
         loeValues.externalDependencyCount * externalDependencyCountWeight +

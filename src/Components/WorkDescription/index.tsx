@@ -18,15 +18,21 @@ export function WorkDescription() {
     }
 
     return (
-        <select
-            value={workDescriptionValue}
-            onChange={update}>
-            <option value="0.5">Routine Update</option>
-            <option value="1">Minor Enhancement</option>
-            <option value="1.5">New Development</option>
-            <option value="2">Legacy Codebase</option>
-            <option value="3">In Discovery</option>
-            <option value="5">Experimental Development</option>
-        </select>
+        <ul>
+            <li>
+                <label>Type of work</label>
+                <select
+                    value={workDescriptionValue}
+                    onChange={update}>
+                    <option value="0.5">Routine Update</option>
+                    <option value="1">Minor Enhancement</option>
+                    <option value="1.5">New Development</option>
+                    <option value="2">Legacy Codebase</option>
+                    <option value="3">In Discovery</option>
+                    <option value="5">Experimental Development</option>
+                </select>
+
+            </li>
+        </ul>
     )
 }

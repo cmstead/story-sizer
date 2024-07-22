@@ -17,7 +17,7 @@ export default function ExternalDependencies() {
     return (
         <ul>
             <li>
-                Total number of external dependencies:
+                <label>Total number of external dependencies:</label>
                 <input
                     type="number"
                     value={externalDependencyCount}
