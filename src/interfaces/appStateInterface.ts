@@ -3,6 +3,7 @@ export interface AppState {
         verticalCount: number,
         horizontalCount: number
     },
+    workDescriptionValue: number,
     externalDependencyCount: number
 }
 

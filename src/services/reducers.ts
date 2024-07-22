@@ -22,12 +22,21 @@ export function externalDependencyCountReducer(state: AppState, action) {
     }
 }
 
+export function workDescriptionValueReducer(state: AppState, action) {
+    return {
+        ...state,
+        workDescriptionValue: action.payload.value
+    }
+}
+
 export function appReducer(state = initialState, action) {
     switch (action.type) {
         case actionTypes.LAYER_COUNT_UPDATED:
             return layerCountReducer(state, action)
         case actionTypes.DEPENDENCY_COUNT_UPDATED:
             return externalDependencyCountReducer(state, action)
+        case actionTypes.WORK_DESCRIPTION_UPDATED:
+            return workDescriptionValueReducer(state, action)
         default:
             return state
 
