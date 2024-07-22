@@ -4,7 +4,8 @@ export interface AppState {
         horizontalCount: number
     },
     workDescriptionValue: number,
-    externalDependencyCount: number
+    externalDependencyCount: number,
+    criticalPathDepth: number
 }
 
 export interface StoreState {

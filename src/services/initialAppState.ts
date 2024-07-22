@@ -5,6 +5,7 @@ export const initialState: AppState = {
         verticalCount: 1,
         horizontalCount: 1
     },
+    criticalPathDepth: 0,
     workDescriptionValue: 1,
     externalDependencyCount: 0
 }

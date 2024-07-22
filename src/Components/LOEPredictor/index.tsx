@@ -4,6 +4,7 @@ import { horizontalCountSelector, verticalCountSelector } from "../FunctionalLay
 import { dependencyCountSelector } from "../ExternalDependencies/externalDependencyCountSelector.ts";
 import { workDescriptionSelector } from "../WorkDescription/workDescriptionSelector.ts";
 import { estimateLOE } from "./loePredictor.ts";
+import { criticalPathDepthSelector } from "../CriticalPathDepth/criticalPathDepthSelector.ts";
 
 export function LOEPredictor() {
 
@@ -11,7 +12,8 @@ export function LOEPredictor() {
         verticalCount: useSelector(verticalCountSelector),
         horizontalCount: useSelector(horizontalCountSelector),
         externalDependencyCount: useSelector(dependencyCountSelector),
-        workDescriptionValue: useSelector(workDescriptionSelector)
+        workDescriptionValue: useSelector(workDescriptionSelector),
+        criticalPathDepth: useSelector(criticalPathDepthSelector)
     }
 
     return (

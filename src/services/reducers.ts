@@ -29,6 +29,13 @@ export function workDescriptionValueReducer(state: AppState, action) {
     }
 }
 
+export function criticalPathDepthReducer(state: AppState, action): AppState {
+    return {
+        ...state,
+        criticalPathDepth: action.payload.value
+    }
+}
+
 export function appReducer(state = initialState, action) {
     switch (action.type) {
         case actionTypes.LAYER_COUNT_UPDATED:
@@ -37,6 +44,8 @@ export function appReducer(state = initialState, action) {
             return externalDependencyCountReducer(state, action)
         case actionTypes.WORK_DESCRIPTION_UPDATED:
             return workDescriptionValueReducer(state, action)
+        case actionTypes.CRITICAL_PATH_DEPTH_UPDATED:
+            return criticalPathDepthReducer(state, action)
         default:
             return state
 
