@@ -4,6 +4,25 @@
   width: 70%;
 }
 
+fieldset {
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
+fieldset div input, fieldset legend {
+  margin-bottom: 12px;
+}
+
+#loe-predictor {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
 .App ul, .App fieldset, .App div {
   text-align: left
+}
+
+.count-display {
+  font-weight: bold;
+  padding: 0 5px;
 }

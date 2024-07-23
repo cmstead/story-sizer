@@ -35,22 +35,12 @@ export default function FunctionalLayers(): ReactElement {
     return (
         <ul>
             <li>
-                Vertical layers touched
-                <input
-                    type="number"
-                    value={verticalCount}
-                    name="verticalCount"
-                    min={1}
-                    onChange={updateCount}></input>
+                Logical layers touched 
+                <span className="count-display">{verticalCount}</span>
             </li>
             <li>
-                Horizonal layers touched
-                <input
-                    type="number"
-                    value={horizontalCount}
-                    name="horizontalCount"
-                    min={1}
-                    onChange={updateCount}></input>
+                Logical units touched 
+                <span className="count-display">{horizontalCount}</span>
             </li>
         </ul>
     )

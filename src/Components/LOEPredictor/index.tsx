@@ -17,6 +17,6 @@ export function LOEPredictor() {
     }
 
     return (
-        <div>Predicted Fibonacci Complexity: {estimateLOE(loeValues)}</div>
+        <div id="loe-predictor">Predicted Fibonacci Complexity: {estimateLOE(loeValues)}</div>
     )
 }

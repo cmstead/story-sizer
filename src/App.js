@@ -15,6 +15,7 @@ function App() {
         <LOEPredictor></LOEPredictor>
         <FunctionalUnits></FunctionalUnits>
         <ul>
+          <li><FunctionalLayers></FunctionalLayers></li>
           <li><ExternalDependencies></ExternalDependencies></li>
 
           <li><CriticalPathDepth></CriticalPathDepth></li>
