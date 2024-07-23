@@ -6,12 +6,14 @@ import { store } from './services/store.ts';
 import { LOEPredictor } from './Components/LOEPredictor/index.tsx';
 import { WorkDescription } from './Components/WorkDescription/index.tsx';
 import CriticalPathDepth from './Components/CriticalPathDepth/index.tsx';
+import FunctionalUnits from './Components/FunctionalUnits/index.tsx';
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
         <LOEPredictor></LOEPredictor>
+        <FunctionalUnits></FunctionalUnits>
         <ul>
           <li><FunctionalLayers></FunctionalLayers></li>
           <li><ExternalDependencies></ExternalDependencies></li>
