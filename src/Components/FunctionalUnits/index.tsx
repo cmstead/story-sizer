@@ -31,9 +31,11 @@ export default function FunctionalUnits() {
         updateLayerId(layerId + 1)
     }
 
-    function incrementUnitCount(layerId) {
-        console.log(layerId, 'increment unit count')
+    function removeLayer(layerId) {
+        updateLayers(layers.filter(layer => layer.id !== layerId));
+    }
 
+    function incrementUnitCount(layerId) {
         updateLayers(layers.map((layer) =>
             layer.id === layerId ?
                 { id: layerId, unitCount: layer.unitCount + 1 }
@@ -43,7 +45,10 @@ export default function FunctionalUnits() {
     return (
         <div>
             {
-                layers.map(layer => <LogicalLayer key={layer.id} incrementUnitCount={() => incrementUnitCount(layer.id)}></LogicalLayer>)
+                layers.map(layer => <LogicalLayer 
+                    key={layer.id} 
+                    incrementUnitCount={() => incrementUnitCount(layer.id)}
+                    removeLayer={() => removeLayer(layer.id)}></LogicalLayer>)
             }
             <div><button onClick={insertLayer}>Insert Layer</button></div>
         </div>

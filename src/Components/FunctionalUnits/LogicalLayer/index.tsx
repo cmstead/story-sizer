@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LogicalUnit from "../LogicalUnit/index.tsx";
 
-export default function LogicalLayer({ incrementUnitCount }) {
+export default function LogicalLayer({ incrementUnitCount, removeLayer }) {
     const [legendValue, updateLegendValue] = useState("Logical Layer");
     const [unitId, updateUnitId] = useState(1);
     const [logicalUnits, updateLogicalUnits] = useState([{ id: 0 }]);
@@ -27,6 +27,7 @@ export default function LogicalLayer({ incrementUnitCount }) {
                 value={legendValue}
                 onChange={updateLegend}
             ></input></legend>
+            <button className="remove-layer" onClick={() => removeLayer()}>X</button>
             {logicalUnits.map(value =>
                 <LogicalUnit key={value.id}></LogicalUnit>
             )}
