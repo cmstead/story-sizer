@@ -13,6 +13,14 @@ fieldset div input, fieldset legend {
   margin-bottom: 12px;
 }
 
+li {
+  line-height: 32px;
+}
+
+label {
+  display: block;
+}
+
 .remove-layer {
   float: right;
   border: 0;
@@ -36,4 +44,11 @@ fieldset div input, fieldset legend {
 .count-display {
   font-weight: bold;
   padding: 0 5px;
+}
+
+@media only screen and (min-width: 200px) {
+  label {
+    display: block;
+    width: auto;
+  }
 }
