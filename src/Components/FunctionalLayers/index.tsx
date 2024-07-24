@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react"
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 import { horizontalCountSelector, verticalCountSelector } from "./functionalLayerCountSelectors.ts"
 // import { actionTypes } from "../../services/constants.ts"
 
@@ -18,7 +18,7 @@ export default function FunctionalLayers(): ReactElement {
     const verticalCount = useSelector(verticalCountSelector)
     const horizontalCount = useSelector(horizontalCountSelector)
 
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
     // const updateCount = ({ target }) => {
     //     const baseValue = target.value
