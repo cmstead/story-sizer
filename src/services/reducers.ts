@@ -36,6 +36,13 @@ export function criticalPathDepthReducer(state: AppState, action): AppState {
     }
 }
 
+export function acceptanceCriteriaCountReducer(state: AppState, action): AppState {
+    return {
+        ...state,
+        acceptanceCriteriaCount: action.payload.value
+    }
+}
+
 export function appReducer(state = initialState, action) {
     switch (action.type) {
         case actionTypes.LAYER_COUNT_UPDATED:
@@ -46,6 +53,8 @@ export function appReducer(state = initialState, action) {
             return workDescriptionValueReducer(state, action)
         case actionTypes.CRITICAL_PATH_DEPTH_UPDATED:
             return criticalPathDepthReducer(state, action)
+        case actionTypes.ACCEPTANCE_CRITERIA_COUNT_UPDATED:
+            return acceptanceCriteriaCountReducer(state, action)
         default:
             return state
 

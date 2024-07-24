@@ -7,6 +7,7 @@ export const initialState: AppState = {
     },
     criticalPathDepth: 0,
     workDescriptionValue: 1,
-    externalDependencyCount: 0
+    externalDependencyCount: 0,
+    acceptanceCriteriaCount: 1
 }
 

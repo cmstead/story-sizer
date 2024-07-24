@@ -3,8 +3,9 @@ import { useSelector } from "react-redux";
 import { horizontalCountSelector, verticalCountSelector } from "../FunctionalUnits/functionalLayerCountSelectors.ts";
 import { dependencyCountSelector } from "../ExternalDependencies/externalDependencyCountSelector.ts";
 import { workDescriptionSelector } from "../WorkDescription/workDescriptionSelector.ts";
-import { estimateLOE } from "./loePredictor.ts";
 import { criticalPathDepthSelector } from "../CriticalPathDepth/criticalPathDepthSelector.ts";
+import { acceptanceCriteriaCountSelector } from "../AcceptanceCriteria/acceptanceCriteriaCountSelector.ts"
+import { estimateLOE } from "./loePredictor.ts";
 
 export function LOEPredictor() {
 
@@ -13,7 +14,8 @@ export function LOEPredictor() {
         horizontalCount: useSelector(horizontalCountSelector),
         externalDependencyCount: useSelector(dependencyCountSelector),
         workDescriptionValue: useSelector(workDescriptionSelector),
-        criticalPathDepth: useSelector(criticalPathDepthSelector)
+        criticalPathDepth: useSelector(criticalPathDepthSelector),
+        acceptanceCriteriaCount: useSelector(acceptanceCriteriaCountSelector)
     }
 
     return (

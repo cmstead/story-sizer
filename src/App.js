@@ -6,6 +6,7 @@ import { LOEPredictor } from './Components/LOEPredictor/index.tsx';
 import { WorkDescription } from './Components/WorkDescription/index.tsx';
 import CriticalPathDepth from './Components/CriticalPathDepth/index.tsx';
 import FunctionalUnits from './Components/FunctionalUnits/index.tsx';
+import AcceptanceCriteria from './Components/AcceptanceCriteria/index.tsx';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
           <ExternalDependencies></ExternalDependencies>
           <CriticalPathDepth></CriticalPathDepth>
+          <AcceptanceCriteria></AcceptanceCriteria>
           <li>Historic ticket/work split value (0, 1, 2, 3, 4, 5)</li>
         </ul>
       </div>

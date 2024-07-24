@@ -5,5 +5,6 @@ export const weightMap = {
         verticalCount: .5,
         horizonalCount: .5
     },
-    externalDependencyCount: 2
+    externalDependencyCount: 2,
+    criticalPathWeight: 1.25
 }

@@ -5,7 +5,8 @@ export interface AppState {
     },
     workDescriptionValue: number,
     externalDependencyCount: number,
-    criticalPathDepth: number
+    criticalPathDepth: number,
+    acceptanceCriteriaCount: number
 }
 
 export interface StoreState {

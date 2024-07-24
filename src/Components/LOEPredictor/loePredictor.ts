@@ -3,10 +3,12 @@ import { fibonacciValues, weightMap } from "./loeConstants.ts";
 function sumWeightedValues(loeValues) {
     const verticalCountWeight = weightMap.functionalLayerCounts.verticalCount
     const horizontalCountWeight = weightMap.functionalLayerCounts.horizonalCount
-    const workDescriptionWeight = loeValues.workDescriptionValue
     const externalDependencyCountWeight = weightMap.externalDependencyCount
+    const criticalPathWeight = weightMap.criticalPathWeight
+    const workDescriptionWeight = loeValues.workDescriptionValue
 
-    const criticalPathValue = 1.25 ** loeValues.criticalPathDepth - 1;
+    const criticalPathValue = (criticalPathWeight ** loeValues.criticalPathDepth) - 1;
+    const acceptanceCriteriaValue = 1 + (0.125 * (loeValues.acceptanceCriteriaCount - 1))
     const verticalSliceValue = loeValues.verticalCount * verticalCountWeight;
     const horizontalSliceValue = loeValues.horizontalCount * horizontalCountWeight;
     const externalDependencyValue = loeValues.externalDependencyCount * externalDependencyCountWeight;
@@ -15,7 +17,7 @@ function sumWeightedValues(loeValues) {
         horizontalSliceValue +
         externalDependencyValue +
         criticalPathValue
-    ) * workDescriptionWeight
+    ) * workDescriptionWeight * acceptanceCriteriaValue
 }
 
 function selectNearestFibonacciValue(weightedSum) {
