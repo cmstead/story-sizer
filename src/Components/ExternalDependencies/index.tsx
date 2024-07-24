@@ -15,15 +15,13 @@ export default function ExternalDependencies() {
     })
 
     return (
-        <ul>
-            <li>
-                <label>Total number of external dependencies:</label>
-                <input
-                    type="number"
-                    value={externalDependencyCount}
-                    min={0}
-                    onChange={dispatchCountUpdate}></input>
-            </li>
-        </ul>
+        <li>
+            <label>Total number of external dependencies:</label>
+            <input
+                type="number"
+                value={externalDependencyCount}
+                min={0}
+                onChange={dispatchCountUpdate}></input>
+        </li>
     )
 }

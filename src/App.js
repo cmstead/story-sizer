@@ -1,4 +1,3 @@
-import FunctionalLayers from './Components/FunctionalLayers/index.tsx'
 import ExternalDependencies from './Components/ExternalDependencies/index.tsx'
 import './App.css';
 import { Provider } from 'react-redux';
@@ -15,12 +14,10 @@ function App() {
         <LOEPredictor></LOEPredictor>
         <FunctionalUnits></FunctionalUnits>
         <ul>
-          <li><FunctionalLayers></FunctionalLayers></li>
-          <li><ExternalDependencies></ExternalDependencies></li>
+          <WorkDescription></WorkDescription>
 
-          <li><CriticalPathDepth></CriticalPathDepth></li>
-          <li><WorkDescription></WorkDescription></li>
-          {/* <li>Describe the work: (routine updates (.5), minor enhancement (1), new development (1.5), legacy (2), in discovery (3), experimental (5))</li> */}
+          <ExternalDependencies></ExternalDependencies>
+          <CriticalPathDepth></CriticalPathDepth>
           <li>Historic ticket/work split value (0, 1, 2, 3, 4, 5)</li>
         </ul>
       </div>

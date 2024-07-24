@@ -15,7 +15,6 @@ export default function CriticalPathDepth() {
     })
 
     return (
-        <ul>
             <li>
                 Dependency chain length (critical path):
                 <input
@@ -24,6 +23,5 @@ export default function CriticalPathDepth() {
                     min={0}
                     onChange={updateCriticalPathDepth}></input>
             </li>
-        </ul>
     )
 }

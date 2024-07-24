@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { horizontalCountSelector, verticalCountSelector } from "../FunctionalLayers/functionalLayerCountSelectors.ts";
+import { horizontalCountSelector, verticalCountSelector } from "../FunctionalUnits/functionalLayerCountSelectors.ts";
 import { dependencyCountSelector } from "../ExternalDependencies/externalDependencyCountSelector.ts";
 import { workDescriptionSelector } from "../WorkDescription/workDescriptionSelector.ts";
 import { estimateLOE } from "./loePredictor.ts";
