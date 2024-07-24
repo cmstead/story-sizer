@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function LogicalUnit() {
+export default function LogicalUnit({ removeLogicalUnit }) {
     const [unitName, updateUnitNameValue] = useState('Logical Unit');
 
     function updateUnitName({ target }) {
@@ -8,6 +8,6 @@ export default function LogicalUnit() {
     }
 
     return (
-        <div><input onChange={updateUnitName} value={unitName}></input></div>
+        <div><button className="remove-logical-unit" onClick={removeLogicalUnit}>X</button><input onChange={updateUnitName} value={unitName}></input></div>
     );
 }

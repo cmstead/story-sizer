@@ -42,12 +42,20 @@ export default function FunctionalUnits() {
                 : layer))
     }
 
+    function decrementUnitCount(layerId) {
+        updateLayers(layers.map((layer) =>
+            layer.id === layerId ?
+                { id: layerId, unitCount: layer.unitCount - 1 }
+                : layer))
+    }
+
     return (
         <div>
             {
                 layers.map(layer => <LogicalLayer 
                     key={layer.id} 
                     incrementUnitCount={() => incrementUnitCount(layer.id)}
+                    decrementUnitCount={() => decrementUnitCount(layer.id)}
                     removeLayer={() => removeLayer(layer.id)}></LogicalLayer>)
             }
             <div><button onClick={insertLayer}>Insert Layer</button></div>
