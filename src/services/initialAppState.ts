@@ -8,6 +8,7 @@ export const initialState: AppState = {
     criticalPathDepth: 0,
     workDescriptionValue: 1,
     externalDependencyCount: 0,
-    acceptanceCriteriaCount: 1
+    acceptanceCriteriaCount: 1,
+    regressionRiskCount: 0
 }
 

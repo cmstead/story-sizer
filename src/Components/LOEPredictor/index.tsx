@@ -5,6 +5,8 @@ import { dependencyCountSelector } from "../ExternalDependencies/externalDepende
 import { workDescriptionSelector } from "../WorkDescription/workDescriptionSelector.ts";
 import { criticalPathDepthSelector } from "../CriticalPathDepth/criticalPathDepthSelector.ts";
 import { acceptanceCriteriaCountSelector } from "../AcceptanceCriteria/acceptanceCriteriaCountSelector.ts"
+import { regressionRiskSelector } from "../RegressionRisk/regressionRiskSelector.ts";
+
 import { estimateLOE } from "./loePredictor.ts";
 
 export function LOEPredictor() {
@@ -15,7 +17,8 @@ export function LOEPredictor() {
         externalDependencyCount: useSelector(dependencyCountSelector),
         workDescriptionValue: useSelector(workDescriptionSelector),
         criticalPathDepth: useSelector(criticalPathDepthSelector),
-        acceptanceCriteriaCount: useSelector(acceptanceCriteriaCountSelector)
+        acceptanceCriteriaCount: useSelector(acceptanceCriteriaCountSelector),
+        regressionRiskCount: useSelector(regressionRiskSelector)
     }
 
     return (

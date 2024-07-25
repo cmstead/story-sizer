@@ -8,16 +8,17 @@ function sumWeightedValues(loeValues) {
     const workDescriptionWeight = loeValues.workDescriptionValue
 
     const criticalPathValue = (criticalPathWeight ** loeValues.criticalPathDepth) - 1;
-    const acceptanceCriteriaValue = 1 + (0.125 * (loeValues.acceptanceCriteriaCount - 1))
+    const acceptanceCriteriaValue = 1 + (0.0625 * (loeValues.acceptanceCriteriaCount - 1))
     const verticalSliceValue = loeValues.verticalCount * verticalCountWeight;
     const horizontalSliceValue = loeValues.horizontalCount * horizontalCountWeight;
     const externalDependencyValue = loeValues.externalDependencyCount * externalDependencyCountWeight;
+    const regressionRiskWeight = 1 + (0.25 * loeValues.regressionRiskCount);
 
     return (verticalSliceValue +
         horizontalSliceValue +
         externalDependencyValue +
         criticalPathValue
-    ) * workDescriptionWeight * acceptanceCriteriaValue
+    ) * workDescriptionWeight * acceptanceCriteriaValue * regressionRiskWeight
 }
 
 function selectNearestFibonacciValue(weightedSum) {

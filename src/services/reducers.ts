@@ -43,6 +43,13 @@ export function acceptanceCriteriaCountReducer(state: AppState, action): AppStat
     }
 }
 
+export function regressionRiskCountReducer(state: AppState, action): AppState {
+    return {
+        ...state,
+        regressionRiskCount: action.payload.value
+    };
+}
+
 export function appReducer(state = initialState, action) {
     switch (action.type) {
         case actionTypes.LAYER_COUNT_UPDATED:
@@ -55,6 +62,8 @@ export function appReducer(state = initialState, action) {
             return criticalPathDepthReducer(state, action)
         case actionTypes.ACCEPTANCE_CRITERIA_COUNT_UPDATED:
             return acceptanceCriteriaCountReducer(state, action)
+        case actionTypes.REGRESSION_RISK_COUNT_UPDATED:
+            return regressionRiskCountReducer(state, action)
         default:
             return state
 
