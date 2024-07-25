@@ -12,7 +12,7 @@ function sumWeightedValues(loeValues) {
     const verticalSliceValue = loeValues.verticalCount * verticalCountWeight;
     const horizontalSliceValue = loeValues.horizontalCount * horizontalCountWeight;
     const externalDependencyValue = loeValues.externalDependencyCount * externalDependencyCountWeight;
-    const regressionRiskWeight = 1 + (0.25 * loeValues.regressionRiskCount);
+    const regressionRiskWeight = 1 + (0.1675 * loeValues.regressionRiskCount);
 
     return (verticalSliceValue +
         horizontalSliceValue +
