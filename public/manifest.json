@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Complexity Calculator",
+  "name": "Complexity Calculator for Software Development",
   "icons": [
     {
       "src": "favicon.ico",

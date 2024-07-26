@@ -8,6 +8,7 @@ import CriticalPathDepth from './Components/CriticalPathDepth/index.tsx';
 import FunctionalUnits from './Components/FunctionalUnits/index.tsx';
 import AcceptanceCriteria from './Components/AcceptanceCriteria/index.tsx';
 import RegressionRisk from './Components/RegressionRisk/index.tsx';
+import Notes from './Components/Notes/index.tsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <CriticalPathDepth></CriticalPathDepth>
           <AcceptanceCriteria></AcceptanceCriteria>
           <RegressionRisk></RegressionRisk>
+          <Notes></Notes>
         </ul>
       </div>
     </Provider>
