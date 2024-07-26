@@ -18,9 +18,9 @@ function App() {
         <FunctionalUnits></FunctionalUnits>
         <ul>
           <WorkDescription></WorkDescription>
-          <ExternalDependencies></ExternalDependencies>
-          <CriticalPathDepth></CriticalPathDepth>
           <AcceptanceCriteria></AcceptanceCriteria>
+          <CriticalPathDepth></CriticalPathDepth>
+          <ExternalDependencies></ExternalDependencies>
           <RegressionRisk></RegressionRisk>
           <Notes></Notes>
         </ul>
