@@ -41,7 +41,7 @@ export default function LogicalLayer({ incrementUnitCount, decrementUnitCount, r
                     key={unit.id}
                     removeLogicalUnit={() => removeLogicalUnit(unit.id)}></LogicalUnit>
             )}
-            <div><button onClick={addLogicalUnit}>Insert Unit</button></div>
+            <div><button onClick={addLogicalUnit}>Add Unit</button></div>
         </fieldset>
     );
 }

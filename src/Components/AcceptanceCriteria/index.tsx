@@ -16,13 +16,13 @@ export default function AcceptanceCriteria() {
         });
 
     return (
-        <li>
+        <div>
             <label>Acceptance criteria count:</label>
             <input
                 type="number"
                 value={acceptanceCriteriaCount}
                 min={1}
                 onChange={updateAcceptanceCriteriaCount}></input>
-        </li>
+        </div>
     )
 }

@@ -50,7 +50,7 @@ export default function FunctionalUnits() {
     }
 
     return (
-        <div>
+        <div id="functional-units">
             {
                 layers.map(layer => <LogicalLayer 
                     key={layer.id} 
@@ -58,7 +58,7 @@ export default function FunctionalUnits() {
                     decrementUnitCount={() => decrementUnitCount(layer.id)}
                     removeLayer={() => removeLayer(layer.id)}></LogicalLayer>)
             }
-            <div><button onClick={insertLayer}>Insert Layer</button></div>
+            <fieldset className="insert-layer"><button onClick={insertLayer}>Add Layer</button></fieldset>
         </div>
     );
 }

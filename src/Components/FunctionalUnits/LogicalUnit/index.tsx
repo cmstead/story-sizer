@@ -8,6 +8,6 @@ export default function LogicalUnit({ removeLogicalUnit }) {
     }
 
     return (
-        <div><button className="remove-logical-unit" onClick={removeLogicalUnit}>X</button><input onChange={updateUnitName} value={unitName}></input></div>
+        <div><button className="remove" onClick={removeLogicalUnit}>X</button><input onChange={updateUnitName} value={unitName}></input></div>
     );
 }

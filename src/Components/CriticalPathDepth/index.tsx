@@ -15,13 +15,13 @@ export default function CriticalPathDepth() {
     })
 
     return (
-            <li>
+            <div>
                 <label>Dependency chain length (critical path):</label>
                 <input
                     type="number"
                     value={criticalPathDepth}
                     min={0}
                     onChange={updateCriticalPathDepth}></input>
-            </li>
+            </div>
     )
 }

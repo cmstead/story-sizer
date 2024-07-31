@@ -18,7 +18,7 @@ export function WorkDescription() {
     }
 
     return (
-        <li>
+        <div>
             <label>Type of work:</label>
             <select
                 value={workDescriptionValue}
@@ -31,6 +31,6 @@ export function WorkDescription() {
                 <option value="5">Experimental Development</option>
             </select>
 
-        </li>
+        </div>
     )
 }

@@ -17,13 +17,13 @@ export default function RegressionRisk() {
     }
 
     return (
-        <li>
+        <div>
             <label>Regression Risk Count:</label>
             <input
                 type="number"
                 value={regressionRiskCount}
                 min={0}
                 onChange={updateCount}></input>
-        </li>
+        </div>
     )
 }

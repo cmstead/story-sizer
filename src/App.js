@@ -16,14 +16,25 @@ function App() {
       <div className="App">
         <LOEPredictor></LOEPredictor>
         <FunctionalUnits></FunctionalUnits>
-        <ul>
-          <WorkDescription></WorkDescription>
-          <AcceptanceCriteria></AcceptanceCriteria>
-          <CriticalPathDepth></CriticalPathDepth>
-          <ExternalDependencies></ExternalDependencies>
-          <RegressionRisk></RegressionRisk>
-          <Notes></Notes>
-        </ul>
+        <div className="descriptors">
+          <fieldset id="basic-description">
+            <legend>Work Description</legend>
+            <WorkDescription></WorkDescription>
+            <AcceptanceCriteria></AcceptanceCriteria>
+          </fieldset>
+          <fieldset id="extended-description">
+            <legend>Extended Description</legend>
+            <CriticalPathDepth></CriticalPathDepth>
+            <ExternalDependencies></ExternalDependencies>
+            <RegressionRisk></RegressionRisk>
+          </fieldset>
+        </div>
+        <div id="notes">
+          <fieldset>
+            <legend>Additional Notes</legend>
+            <Notes></Notes>
+          </fieldset>
+        </div>
       </div>
     </Provider>
   );

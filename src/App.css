@@ -1,15 +1,23 @@
+body {
+  background-color: #fcfcfc;
+}
+
 .App {
   text-align: center;
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
+  margin-top: 3vh;
 }
 
 fieldset {
   margin-bottom: 12px;
   border-radius: 5px;
+  border: 2px solid #999;
+  background-color: #fff;
+  padding: 15px;
 }
 
-fieldset div input, fieldset legend {
+fieldset div input, fieldset div select, fieldset legend {
   margin-bottom: 12px;
 }
 
@@ -32,11 +40,6 @@ label {
   color: #900;
 }
 
-#loe-predictor {
-  font-size: 22px;
-  margin-bottom: 18px;
-}
-
 .App ul, .App fieldset, .App div {
   text-align: left
 }
@@ -46,9 +49,57 @@ label {
   padding: 0 5px;
 }
 
-@media only screen and (min-width: 200px) {
+.descriptors {
+  width: 49%;
+  float: left;
+}
+
+.insert-layer {
+  border: 2px solid #cecece;
+}
+
+.insert-layer:hover {
+  border: 2px solid #999;
+}
+
+.remove {
+  margin-right: 10px;
+}
+
+#loe-predictor {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+#functional-units {
+  margin-bottom: 28px;
+  width: 100%
+}
+
+#notes {
+  float: left;
+  width: 49%;
+  margin-left: 2%;
+}
+
+#notes textarea {
+  width: 98%;
+}
+
+@media only screen and (max-width: 1024px) {
   label {
     display: block;
     width: auto;
+  }
+
+  .descriptors {
+    float: none;
+    width: 100%;
+  }
+
+  #notes {
+    float: none;
+    width: 100%;
+    margin: auto;
   }
 }
