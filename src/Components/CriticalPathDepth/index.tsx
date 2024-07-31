@@ -16,7 +16,7 @@ export default function CriticalPathDepth() {
 
     return (
             <div>
-                <label>Dependency chain length (critical path):</label>
+                <label>Dependency chain length:</label>
                 <input
                     type="number"
                     value={criticalPathDepth}
