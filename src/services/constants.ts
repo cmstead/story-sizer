@@ -4,6 +4,7 @@ export const actionTypes = {
     WORK_DESCRIPTION_UPDATED: 'workDescription/updated',
     CRITICAL_PATH_DEPTH_UPDATED: 'criticalPathDepth/updated',
     ACCEPTANCE_CRITERIA_COUNT_UPDATED: 'acceptanceCriteriaCount/updated',
-    REGRESSION_RISK_COUNT_UPDATED: 'regressionRiskCount/updated'
+    REGRESSION_RISK_COUNT_UPDATED: 'regressionRiskCount/updated',
+    NOTES_UPDATED: 'notes/updated'
 }
 

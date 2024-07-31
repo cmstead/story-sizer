@@ -9,6 +9,7 @@ export const initialState: AppState = {
     workDescriptionValue: 1,
     externalDependencyCount: 0,
     acceptanceCriteriaCount: 1,
-    regressionRiskCount: 0
+    regressionRiskCount: 0,
+    notes: ''
 }
 

@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { notesSelector } from "./notesSelector.ts";
+import { actionTypes } from "../../services/constants.ts";
 
 export default function Notes() {
-    const [notes, updateNotes] = useState("");
+    const notes = useSelector(notesSelector)
+    const dispatch = useDispatch()
 
     const setNotes = ({ target }) => {
-        updateNotes(target.value);
+        dispatch({
+            type: actionTypes.NOTES_UPDATED,
+            payload: {
+                value: target.value
+            }
+        });
     }
 
     return (

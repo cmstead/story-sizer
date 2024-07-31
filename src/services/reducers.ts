@@ -50,6 +50,13 @@ export function regressionRiskCountReducer(state: AppState, action): AppState {
     };
 }
 
+export function notesReducer(state: AppState, action): AppState {
+    return {
+        ...state,
+        notes: action.payload.value
+    };
+}
+
 export function appReducer(state = initialState, action) {
     switch (action.type) {
         case actionTypes.LAYER_COUNT_UPDATED:
@@ -64,6 +71,8 @@ export function appReducer(state = initialState, action) {
             return acceptanceCriteriaCountReducer(state, action)
         case actionTypes.REGRESSION_RISK_COUNT_UPDATED:
             return regressionRiskCountReducer(state, action)
+        case actionTypes.NOTES_UPDATED:
+            return notesReducer(state, action)
         default:
             return state
 

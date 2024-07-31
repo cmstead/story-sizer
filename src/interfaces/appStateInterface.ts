@@ -7,7 +7,8 @@ export interface AppState {
     externalDependencyCount: number,
     criticalPathDepth: number,
     acceptanceCriteriaCount: number,
-    regressionRiskCount: number
+    regressionRiskCount: number,
+    notes: string
 }
 
 export interface StoreState {
